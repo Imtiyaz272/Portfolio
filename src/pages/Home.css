@@ -1,0 +1,71 @@
+.message-box {
+    background-color: white; 
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    max-width: 600px; 
+    margin: 20px;
+}
+
+.message-box::before {
+    content: "";
+    position: absolute;
+    top: 20px; 
+    left: -15px; 
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%); 
+}
+
+.geo {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4; 
+  }
+  
+
+  .triangle-sm {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid rgba(255, 107, 107, 0.8); 
+  }
+  
+
+  .line-sm {
+    width: 40px;
+    height: 1px;
+    background-color: rgba(77, 122, 255, 0.8); 
+  }
+  
+  
+  .semi-circle-sm {
+    width: 20px;
+    height: 10px;
+    background-color: rgba(255, 215, 0, 0.8);
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .circle-sm {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(78, 205, 196, 0.8); 
+    border-radius: 50%;
+  }
+  
+  .geo {
+    animation: gentle-float 15s ease-in-out infinite;
+    animation-delay: calc(var(--index, 0) * 2s);
+  }
+  
+  @keyframes gentle-float {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(0, -5px) rotate(2deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+  
+
+  
