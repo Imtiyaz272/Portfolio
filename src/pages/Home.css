@@ -68,4 +68,25 @@
   }
   
 
+
+@media (max-width: 768px) {
+  .message-box {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .geo {
+    display: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .message-box {
+    font-size: 14px;
+    width: 95%;
+  }
+}
+
   

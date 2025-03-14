@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -32,18 +32,18 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="bg-white w-4/5 rounded-lg text-center p-10 mx-auto mt-20">
-      <h3 className="text-4xl font-bold text-gray-600">Projects</h3>
+    <div className="bg-white w-full md:w-4/5 rounded-lg text-center p-6 md:p-10 mx-auto mt-10">
+      <h3 className="text-3xl md:text-4xl font-bold text-gray-600">Projects</h3>
 
-      <div className="flex justify-center gap-28 p-6 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-6 mt-5">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="bg-[#f5efdb] p-4 rounded-2xl shadow-lg w-64"
-            initial={{ opacity: 0, y: 50 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8, delay: index * 0.2 }} 
-            viewport={{ once: false }} 
+            className="bg-[#f5efdb] p-4 rounded-2xl shadow-lg"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            viewport={{ once: false }}
           >
             <h3 className="font-bold text-lg text-gray-600 font-noto">{project.title}</h3>
             <img
@@ -73,4 +73,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
