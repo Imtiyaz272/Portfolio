@@ -12,3 +12,26 @@
   height: 2px;
   background-color: #796a45;
 }
+
+
+nav {
+  transition: all 0.3s ease-in-out;
+}
+
+nav a {
+  transition: color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
